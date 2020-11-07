@@ -1,0 +1,137 @@
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */     background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Design for the container */
+
+.calculator{
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: -20px 6px 30px -5px rgb(5 2 1);
+}
+
+/* Display */
+.calculator-display{
+  background: linear-gradient(to right, #000000, #e74c3c);
+  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 10px 10px 0 0 ;
+}
+
+.calculator-display h1{
+  margin: 0;
+  padding: 25px;
+  font-size: 45px;
+  font-family: 'Lucita Console', sans-serif;
+  font-weight: 100;
+  overflow-x: auto;
+}
+
+/* Custom scroll bar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Buttons */
+
+.calculator-buttons{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+#eq{
+  background: #3a9679;
+}
+
+.equals-sign{
+  grid-column: -2;
+  grid-row: 2 / span 4;
+}
+
+button{
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: 100;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #c8c8c8;
+}
+
+button:hover{
+  filter: brightness(110%);
+}
+
+button:active{
+  transform: translateY(1px);
+}
+
+button:focus{
+  outline: none;
+}
+
+
+.operator{
+  background: #16213e;
+  color: white;
+  font-size: 30px;
+}
+
+.operator:hover{
+  filter: brightness(80%);
+}
+
+.clear{
+  background: #f64b3c;
+  color: white;
+}
+
+.clear:hover{
+  filter: brightness(90%);
+}
+
+/* Media Query */
+
+@media screen and (max-width:600px){
+  .calculator{
+    width: 95%;
+  }
+
+  body{
+    background: #1F1B24;  
+
+  }
+}
